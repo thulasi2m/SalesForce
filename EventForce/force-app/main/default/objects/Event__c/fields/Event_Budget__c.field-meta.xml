@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Budget__c</fullName>
+    <formula>CASE(
+    TEXT(Event_Type__c),
+    &quot;Wedding&quot;, 50000,
+    &quot;Corporate&quot;, 30000,
+    &quot;Birthday&quot;, 10000,
+    &quot;Anniversary&quot;, 20000,
+    &quot;Festival&quot;, 60000,
+    &quot;Concert&quot;, 40000,
+    &quot;Other&quot;, 15000,
+    0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Event Budget</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
